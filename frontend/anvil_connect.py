@@ -6,7 +6,7 @@ def connect():
 	@anvil.server.callable
 	def say_hello(name):
 		print("Hello from the uplink, %s!" % name)
-		return "Hello from the uplink, %s!"+str(name)
+		return "Hello from the uplink"+str(name)
 
 	anvil.server.wait_forever()
 
