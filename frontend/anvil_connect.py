@@ -1,7 +1,7 @@
 import anvil.server
 
 def connect():
-	anvil.server.connect("AUUM3BBUZ2X663XS3YVCXBOR-A3PANHICIGTZ7P35")
+	anvil.server.connect("X3ZM4VT6464V5AMEBUOBR5ZV-A3PANHICIGTZ7P35")
 
 	@anvil.server.callable
 	def say_hello(name):
