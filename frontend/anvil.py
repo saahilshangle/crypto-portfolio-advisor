@@ -1,4 +1,4 @@
-pip install anvil-uplink
+#pip3 install anvil-uplink
 import anvil.server
 
 def connect():
@@ -7,7 +7,7 @@ def connect():
 	@anvil.server.callable
 	def say_hello(name):
   		print("Hello from the uplink, %s!" % name)
- 		return "Hello from the uplink, %s!" + str(name)
+ 		return "Hello from the uplink, %s!"+str(name)
 
 	anvil.server.wait_forever()
 
