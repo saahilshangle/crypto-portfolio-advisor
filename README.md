@@ -2,7 +2,7 @@
 ## Sample Dashboard
 ## Requirements
 ## Installations
-Install pip
+Install pip__
 Run pip install pyrebase
 ## Usage
 ## Data Sources
