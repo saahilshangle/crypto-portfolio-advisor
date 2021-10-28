@@ -20,14 +20,15 @@ crypto_df = crypto_df[crypto_df['date'] != "2018-11-30"]
 crypto_df['daily_returns'] = (crypto_df['close'] - crypto_df['open']) / (crypto_df['open']) * 100
 crypto_df.head()
 
-bc_df = crypto_df[crypto_df['name'] == "Bitcoin"]
-ax = sns.scatterplot(x = 'open', y = 'close', data = bc_df)
-ax.set(xlabel = "Opening Price per Day for Bitcoin", ylabel = "Closing Price per Day for Bitcoin", 
-       title = "Opening Price vs Closing Price daily")
-plt.show()
-
-plt.plot(bc_df['date'], bc_df['daily_returns'])
-plt.xlabel('Date')
-plt.ylabel('Daily Returns for Bitcoin Stock')
-plt.title('Daily Returns for Bitcoin')
-plt.show()
+def visualize_risk(crypto_name):
+  cr_df = crypto_df[crypto_df['name'].str.lower() == crypto_name.lower()]
+  ax = sns.scatterplot(x = 'open', y = 'close', data = cr_df)
+  ax.set(xlabel = "Opening Price per Day for " + crypto_name, ylabel = "Closing Price per Day for " + crypto_name, 
+        title = "Opening Price vs Closing Price daily")
+  plt.show()
+  plt.plot(bc_df['date'], cr_df['daily_returns'])
+  plt.xlabel('Date')
+  plt.ylabel('Daily Returns for ' + crypto_name +  ' Stock')
+  plt.title('Daily Returns for ' + crypto_name)
+  plt.show()
+visualize_risk("xrp")
