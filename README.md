@@ -1,6 +1,6 @@
 # crypto-portfolio-advisor
 ## Sample Dashboard
-![alt text](./Users/ianchen/Downloads/anvil_U1.png)
+![plot](./Users/ianchen/Downloads/anvil_U1.png)
 ## Requirements
 ## Installations
 Install pip, then run pip install pyrebase
