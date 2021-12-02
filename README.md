@@ -60,7 +60,7 @@ We use **crypto-markets.csv**
 ## System Architecture
 ## Key Features
 - Preprocessing
-  - We uses ```Bayesian Regression``` for our inital crypto currency model building; uses `scrapping` and `simulation` to process inital sample data from DeFiPulse
+  - We uses ```Bayesian Regression``` for our initial cryptocurrency model building; uses `scrapping` and `simulation` to process initial sample data from DeFiPulse
 - Model
   - Crypto Portfolio Advisor is powered by an ARIMA model, which is known for its performance in measure events that happen over a period of time. The model is used to understand past data or predict future data in a series. It’s used when a metric is recorded in regular intervals, from fractions of a second to daily, weekly or monthly periods. During the model selection process, we also tried using prophet model, Gradient Boost, and Bayesian but found out ARIMA model offers better AIC score.
 - Scoring
