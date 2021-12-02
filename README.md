@@ -57,10 +57,20 @@ We use **crypto-markets.csv**
         - **Added two new variables, close_ratio and spread**
         - **Close ratio is the daily close rate, min-maxed with the high and low values for the day.Close Ratio = (Close-Low)/(High-Low)**
         - **Spread is the $USD difference between the high and low values for the day.**
+## System Architecture
+## Key Features
+- Preprocessing
+  - We uses ```Bayesian Regression``` for our inital crypto currency model building; uses `scrapping` and `simulation` to process inital sample data from DeFiPulse
+- Model
+  - Crypto Portfolio Advisor is powered by an ARIMA model, which is known for its performance in measure events that happen over a period of time. The model is used to understand past data or predict future data in a series. It’s used when a metric is recorded in regular intervals, from fractions of a second to daily, weekly or monthly periods. During the model selection process, we also tried using prophet model, Gradient Boost, and Bayesian but found out ARIMA model offers better RMSE score.
+- Scoring
+  - Crypto Portfolio Advisor uses volarity and correlation based on the Portfolio Standard Deviation Formula. It is calculated based on the standard deviation of returns of each asset in the portfolio, the proportion of each asset in the overall portfolio i.e., their respective weights in the total portfolio, and also the correlation between each pair of assets in the portfolio. The main scoring file is ```calculate_risk.py```
+  - A high portfolio standard deviation highlights that the portfolio risk is high, and return is more volatile in nature and, as such unstable as well.
+  - A Portfolio with low Standard Deviation implies less volatility and more stability in the returns of a portfolio and is a very useful financial metric when comparing different portfolios.
+- User Interface
+  - Our application can either output a portfolio of the most profitable portfolio of five different cryptocurrencies based on an user’s selected risk tolerance, or calculates the risk of a user-given portfolio of cryptocurrencies additionally. Each of the feature comes with the current prediction time, a risk level, a pie chart of the recommended/input portfolio, and a historical daily returns for all 5 crypto in one portfolio on the purpose of better understanding. It also comes with a download plot as .png feature, which is easy for users to use.
+  - This information gives new investors a list of cryptocurrencies to potentially invest in and accompanying graphs to show the reason the portfolio’s risk is evaluated the way it is
 
-## Scoring
-## Sentiment Analysis of models
-## Evaluations
 ## Built with
 - anvil
 - Beautiful Soup
