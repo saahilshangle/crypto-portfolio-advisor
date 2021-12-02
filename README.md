@@ -62,15 +62,15 @@ We use **crypto-markets.csv**
 ## Sentiment Analysis of models
 ## Evaluations
 ## Built with
-- ** anvil
-- ** Beautiful Soup
-- ** plotly
-- ** SARIMAX
-- ** Bayesian Regression
+- anvil
+- Beautiful Soup
+- plotly
+- SARIMAX
+- Bayesian Regression
 
 ## Authors
-Saahil Shangle
-Ian Chen
-Gabriel Khouri-Haddad
-Sora Kang
-Suvam Nayak
+- Saahil Shangle
+- Ian Chen
+- Gabriel Khouri-Haddad
+- Sora Kang
+- Suvam Nayak
