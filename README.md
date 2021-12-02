@@ -78,9 +78,11 @@ We use **crypto-markets.csv**
 - SARIMAX
 - Bayesian Regression
 
-## Authors
-- Saahil Shangle
-- Ian Chen
-- Gabriel Khouri-Haddad
-- Sora Kang
-- Suvam Nayak
+## Team
+Our team is formed by UC Berkeley students from various majors and backgrounds:
+
+- Saahil Shangle      --*Business Administration BS, Data Science BA*
+- Ian Chen            --*Development Engineering MDE*
+- Gabriel Khouri-Haddad       --*Computer Science BA*
+- Sora Kang         --*Master of Design MDES*
+- Suvam Nayak       --*Data Science BA*
