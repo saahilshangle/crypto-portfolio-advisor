@@ -1,16 +1,65 @@
 # crypto-portfolio-advisor
 ## Sample Dashboard
+Crypto Portfolio Advisor is a cryptocurrency portfo risk and recommendation tool powered by machine learning algorithm and front-end web services that aims for helping different levels of investors to achieve a more reliable cryptocurrency investment solution. This project was designed by the Crypto Robo Advisor team from UC Berkeley Data-X course. 
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/39391660/144360945-fc017110-767c-4b2b-bb34-068eedb318ce.gif)
-## Requirements
+
 ## Installations
-Install pip, then run pip install pyrebase
-## Usage
-## Data Sources
+Install pip, then run
+
+```
+pip install pyrebase
+```
+To connect the UI to the existing notebook:
+
+import ``` anvil.server```
+
+Then run
+
+```
+pip install anvil-uplink
+```
+
+
+## Files
+
+The main folder to be used is **engine**, which has combined data visualization, bayesian algorithm for potential prediction parts,
+and risk functions.
+
+Here is a breakdown of the ```engine``` folder,
+<br>
+
+
+|engine                |Function                                                                             |
+|----------------------|-------------------------------------------------------------------------------------|
+|**bayesian_pred.py**  |Initial algorithm for 'Bayesian regression for latent source model' method for predicting price variation of crypto.|
+|**risk_scoring.py**   |Initial risk scoring methods                                                         |
+|**risk_visualization.py**|Implemented risk visualization plot                                               |
+|**calculate_risk.py** |Applies portfolio standard deviation formula to build correlation structures and calculated risk score based on variance      |
+|**external.ipynb**    |Core notebook that contains data cleaning, anvil framework, portfolio risk functions, SARIMA models, dynamic asset numbers, and data visualization with ```plotly```  |
+|**portfolio_profit_pred.ipynb** |Foundation of **external.ipynb**, including data preprocessing, model selections/simulations, and risk scoring 1.0  |
+
 ## Scraping
+
+Mains scripts in the sourcing folder is: **coinmarketcap.py**, **defipulse.py**
+
+Each scraping function takes in three arguments: data, soup and tag, and returns the open source data within the stated date range for the particular entity.
+
+
+## Data Sources
+
+We use **crypto-markets.csv**
+
+- **About this file**:
+    - **Observations: 942,000 Variables: 13 Crypto Tokens: 2,071**
+    - **All historic open, high, low, close values for all cryptocurrencies.**
+        - **Fixed duplicate coins sharing symbol by introducing coin slug**
+        - **Added two new variables, close_ratio and spread**
+        - **Close ratio is the daily close rate, min-maxed with the high and low values for the day.Close Ratio = (Close-Low)/(High-Low)**
+        - **Spread is the $USD difference between the high and low values for the day.**
+
 ## Scoring
-## Data Engine
 ## Sentiment Analysis of models
 ## Evaluations
-## Demo
 ## Tools
 ## Authors
