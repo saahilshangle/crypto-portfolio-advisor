@@ -54,6 +54,9 @@ We use **crypto-markets.csv**
         - **Close ratio is the daily close rate, min-maxed with the high and low values for the day.Close Ratio = (Close-Low)/(High-Low)**
         - **Spread is the $USD difference between the high and low values for the day.**
 ## System Architecture
+
+<img width="1151" alt="Screen Shot 2021-12-03 at 2 10 50 PM" src="https://user-images.githubusercontent.com/39391660/144679653-47c3a07d-5526-45b1-9c74-e6a78704b4a0.png">
+
 ## Key Features
 - Preprocessing
   - We uses ```Bayesian Regression``` for our initial cryptocurrency model building; uses `scrapping` and `simulation` to process initial sample data from DeFiPulse
