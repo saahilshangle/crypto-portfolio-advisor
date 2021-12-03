@@ -5,12 +5,7 @@ Crypto Portfolio Advisor is a cryptocurrency portfo risk and recommendation tool
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/39391660/144360945-fc017110-767c-4b2b-bb34-068eedb318ce.gif)
 
 ## Installations
-Install pip, then run
-
-```
-pip install pyrebase
-```
-To connect the UI to the existing notebook:
+Install pip, then connect the UI to the existing notebook:
 
 import ``` anvil.server```
 
